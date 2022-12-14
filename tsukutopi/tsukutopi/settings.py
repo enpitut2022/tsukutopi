@@ -12,16 +12,16 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
-def get_env_variable(key):
-    try:
-        return os.environ[key]
-    except KeyError:
-        return None
+load_dotenv()
 
 # データベースのパスとかを代入している
-SECRET_KEY = get_env_variable("SECRET_KEY")
-DATABASE_PASS = get_env_variable("DATABASE_PASS")
+SECRET_KEY = os.environ['SECRET_KEY']
+DBNAME=os.environ['DBNAME']
+DBHOST=os.environ['DBHOST']
+DBUSER=os.environ['DBUSER']
+DBPASS = os.environ['DBPASS']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,11 +29,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+# SECRET_KEY = 'django-insecure-d7f4c5f6o%iv$^3euh9-&h3=_2^!oqot!f6efj-0!kv47_4eu6'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -85,10 +87,10 @@ WSGI_APPLICATION = 'tsukutopi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': DATABASE_PASS,
-        'HOST': '127.0.0.1',
+        'NAME': DBNAME,
+        'USER': DBUSER,
+        'PASSWORD': DBPASS,
+        'HOST': DBHOST,
         'PORT': '5432',
     }
 }
