@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+# import environ
 import os
+
+
 
 def get_env_variable(key):
     try:
@@ -20,20 +23,21 @@ def get_env_variable(key):
         return None
 
 # データベースのパスとかを代入している
-SECRET_KEY = get_env_variable("SECRET_KEY")
+SECRET_KEY = 'hogehoge'
 DATABASE_PASS = get_env_variable("DATABASE_PASS")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+# env = environ.Env()
+# env.read_env(os.path.join(BASE_DIR, '.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -88,9 +92,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': DATABASE_PASS,
+        'PASSWORD': 'kossuu130708',
         'HOST': '127.0.0.1',
         'PORT': '5432',
+        #'default': env.db(),
     }
 }
 
