@@ -10,3 +10,11 @@ def index(request):
 
     return render(request, 'myapp/template.html', context)
 
+def result(request):
+    profile = Profile.objects.all()
+    context = {
+        'profile':profile
+    }
+
+    return render(request, 'myapp/result.html', context)
+
