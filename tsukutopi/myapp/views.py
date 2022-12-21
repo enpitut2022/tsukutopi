@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Profile
 from django.db.models import Q
+from myapp.forms import Profile
+from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
@@ -25,3 +27,6 @@ def result(request):
 
     return render(request, 'myapp/result.html', context)
 
+def kakikomi(request):
+    f = Profile()
+    return HttpResponse(f)
