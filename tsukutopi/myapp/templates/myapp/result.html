@@ -6,15 +6,20 @@
     </head>
     <body>
         <h1>つくとぴです!</h1>
-        {% for i in profile %}
-        <h2>{{ i.nickname }}</h2>
-        <p>{{ i.major_sub }}</p>
-        <p>{{ i.circle }}</p>
-        <!-- <h2>{{ i.key_number }}</h2>
-        
-        <p>{{ i.Circle }}</p>
-        <p>{{ i.hometown }}</p> -->
+        {% for i in profile_all %}
+        <p>学籍番号{{ i.key_number }}</p>
+        <h2>ニックネーム：{{ i.nickname }}</h2>
+        <p>所属：{{ i.major_sub }}</p>
+        <p>サークル{{ i.circle }}</p>
+        <p>地元{{ i.hometown }}</p>
+        <p>好きな音楽：{{ i.music }}</p>
+        <p>好きなラーメン屋：{{ i.ramen }}</p>
+        <p>好きなゲーム：{{ i.game }}</p>
+        <p>好きなアニメ：{{ i.anime }}</p>
+        <p>好きな映画：{{ i.movie }}</p>
+        <p>好きなスポーツ：{{ i.sport }}</p>
 
         {% endfor %}
+        <a href="../tsukutopi">戻る</a>
     </body>
 </html>
