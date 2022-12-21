@@ -29,4 +29,4 @@ def result(request):
 
 def kakikomi(request):
     f = Profile()
-    return HttpResponse(f)
+    return render(request, 'myapp/input_profile.html', {'form1': f} )
