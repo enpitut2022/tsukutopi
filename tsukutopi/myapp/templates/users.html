@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>ようこそ！</h1>
+        <!-- テーブル -->
+        <table >
+            <thead>
+                <tr>
+                    <th colspan="2">{{msg}}:{{count}}名</th>
+                </tr>
+            </thead>
+            <tbody >
+                <!-- count件(行)数分をループ -->
+                {% for user in userinfo %}
+                <tr>
+                    <!-- 4列分ユーザ情報を出力 -->
+                    <td>{{user.userName}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'showCreateUserForm' %}" >ユーザ追加</a>
+    </body>
+</html>

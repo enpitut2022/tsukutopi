@@ -1,0 +1,20 @@
+
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+       
+    <h1>ユーザ登録</h1>
+ 
+    <form action='{% url "addUser" %}' method='post' class='form'>
+        <!-- ユーザー登録フォームを表示 -->
+        {% csrf_token %}
+        <button type='submit'>登録</button>
+        <a href='{% url "showCreateUserForm" %}'>戻る</a>
+    </form>
+
+    </body>
+</html>

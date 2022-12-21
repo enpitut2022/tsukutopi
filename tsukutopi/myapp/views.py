@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Profile
 from django.db.models import Q
+from .forms import UserForm
 # Create your views here.
 
 def index(request):
@@ -25,3 +26,35 @@ def result(request):
 
     return render(request, 'myapp/result.html', context)
 
+#～～～～～～～～～～～～～～～～～
+# 新規登録フォームHTMLへ返す
+def showCreateUserForm(request):
+    #フォームを変数にセット
+    form = UserForm()
+ 
+    context = {
+        'userForm':form,
+    }
+ 
+    #detail.htmlへデータを渡す
+    return render(request, 'myapp/create.html',context)
+
+# フォームから受取ったデータをDBに登録する
+def addUser(request):
+    #リクエストがPOSTの場合
+    if request.method == 'POST':
+        #リクエストをもとにフォームをインスタンス化
+        userForm = UserForm(request.POST)
+        if userForm.is_valid():
+            userForm.save()
+ 
+    #登録後、全件データを抽出
+    profile_data = Profile.objects.all()
+    context = {
+        'msg': '現在の利用状況',
+        'userinfo': profile_data,
+        'count':profile_data.count,
+    }
+ 
+    #user.htmlへデータを渡す
+    return render(request, 'myapp/users.html',context)
