@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>つくとぴです!</h1>
+        {% for i in profile %}
+        <h2>{{ i.nickname }}</h2>
+        <p>{{ i.major_sub }}</p>
+        <p>{{ i.circle }}</p>
+        <!-- <h2>{{ i.key_number }}</h2>
+        
+        <p>{{ i.Circle }}</p>
+        <p>{{ i.hometown }}</p> -->
+
+        {% endfor %}
+    </body>
+</html>
