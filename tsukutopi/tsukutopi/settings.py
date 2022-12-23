@@ -90,9 +90,9 @@ WSGI_APPLICATION = 'tsukutopi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'myapp',
         'USER': 'postgres',
-        'PASSWORD': 'kossuu130708',
+        'PASSWORD': 'Teacher11eaglu',
         'HOST': '127.0.0.1',
         'PORT': '5432',
         #'default': env.db(),

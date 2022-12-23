@@ -6,6 +6,11 @@
     </head>
     <body>
         <h1>つくとぴです!</h1>
+        {% for i in share_point %}
+        <h2>共通するスポーツ<h2>
+        <h2>{{ i }}</h2>
+        {% endfor %}
+
         {% for i in profile_all %}
         <h2>ニックネーム：{{ i.nickname }}</h2>
         <p>学籍番号{{ i.key_number }}</p>
