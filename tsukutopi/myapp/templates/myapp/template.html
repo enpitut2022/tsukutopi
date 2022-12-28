@@ -9,7 +9,13 @@
         {% for i in profile %}
         <h2>{{ i.nickname }}</h2>
         {% endfor %}
-        <a href="./result">探す</a>
+        <form action="./result" method = "get">
+            <input type = "number" minlength="9" maxlength="9" name="user1" />
+            <input type = "number" minlength="9" maxlength="9" name="user2" />
+            <button type = "submit">探す</button>
+        </form>
+        
+        <!-- <a href="./result">探す</a> -->
         <a href="./input">登録する</a>
 
     </body>

@@ -14,8 +14,13 @@ def index(request):
     return render(request, 'myapp/template.html', context)
 
 def result(request):
-    profile = Profile.objects.filter(Q(key_number=202088888)|Q(key_number=202099999))
-    profile_match = Profile.objects.filter(Q(key_number=202088888)|Q(key_number=202099999))
+
+    if request.GET:
+        user1 = request.GET["user1"]
+        user2 = request.GET["user2"]
+    
+    profile = Profile.objects.filter(Q(key_number=int(user1))|Q(key_number=user2))
+    # profile_match = Profile.objects.filter(Q(key_number=202088888)|Q(key_number=202099999))
     profile_all = Profile.objects.all()
     share_point=[]
     print(profile[0].nickname)
