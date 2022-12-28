@@ -3,16 +3,27 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-  <title>書き込みフォーム</title>
+  <title>プロフィール登録</title>
 </head>
 <body>
-<h1>掲示板 - 書き込みフォーム</h1>
+<h1>プロフィール登録</h1>
 <form method="post">
     {% csrf_token %}
-    <table>
-      {{form1.as_table}}
-      <tr><td colspan='2'><input type="submit" value="Submit"></td></tr>
-    </table>
+      {% for i in form %}
+        {% if i.label == '学籍番号' or i.label == 'ニックネーム' or i.label == 'サークル' %}
+          <div>
+            {{ i.label_tag }}{{ i }}
+          </div>
+        {% else %}
+          <div>
+            {{ i.label_tag }}
+            {% for choice in i %}
+              {{ choice.tag }}{{ choice.choice_label }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    <button type="submit">登録</button>
 </form>
 <a href="..">戻る</a>
 </body>

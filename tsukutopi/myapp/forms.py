@@ -1,5 +1,6 @@
 from django import forms
 from .models import Profile
+from .formlist import *
 
 class Profileforms(forms.ModelForm):
     class Meta:
@@ -18,14 +19,16 @@ class Profileforms(forms.ModelForm):
            'movie':'好きな映画',
            'sport':'好きなスポーツ',
            }
-    # key_number=forms.IntegerField()
-    # nickname=forms.CharField()
-    # major_sub = forms.IntegerField()
-    # circle=forms.CharField()
-    # hometown=forms.IntegerField()
-    # music=forms.IntegerField()
-    # ramen=forms.IntegerField()
-    # game=forms.IntegerField()
-    # anime=forms.IntegerField()
-    # movie=forms.IntegerField()
-    # sport=forms.IntegerField()
+
+class ProfileRadioForm(forms.Form):
+    key_number = forms.IntegerField(label='学籍番号')
+    nickname = forms.CharField(label='ニックネーム')
+    major_sub = forms.ChoiceField(choices=MAJORS, label='専攻', widget=forms.widgets.RadioSelect)
+    circle = forms.CharField(label='サークル')
+    hometown = forms.ChoiceField(choices=PREFECTURES, label='出身', widget=forms.widgets.RadioSelect)
+    music = forms.ChoiceField(choices=MUSICLIST, label='好きな音楽', widget=forms.widgets.RadioSelect)
+    ramen = forms.ChoiceField(choices= RAMENLIST, label='好きなラーメン', widget=forms.widgets.RadioSelect)
+    game = forms.ChoiceField(choices= GAMELIST, label='好きなゲーム', widget=forms.widgets.RadioSelect)
+    anime = forms.ChoiceField(choices= ANIMELIST, label='好きなアニメ', widget=forms.widgets.RadioSelect)
+    movie = forms.ChoiceField(choices= MOVIELIST, label='好きな英語', widget=forms.widgets.RadioSelect)
+    sport = forms.ChoiceField(choices= SPORTLIST, label='好きなスポーツ', widget=forms.widgets.RadioSelect)
