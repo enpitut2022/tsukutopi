@@ -7,7 +7,7 @@
     <body>
         <h1>つくとぴです</h1>
         {% for i in profile %}
-        <h2>{{ i.nickname }}</h2>
+        <h2>{{ i.key_number }}: {{ i.nickname }}</h2>
         {% endfor %}
         <form action="./result" method = "get">
             <input type = "number" minlength="9" maxlength="9" name="user1" />
