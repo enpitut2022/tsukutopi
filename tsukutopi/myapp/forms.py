@@ -30,5 +30,5 @@ class ProfileRadioForm(forms.Form):
     ramen = forms.ChoiceField(choices= RAMENLIST, label='好きなラーメン', widget=forms.widgets.RadioSelect)
     game = forms.ChoiceField(choices= GAMELIST, label='好きなゲーム', widget=forms.widgets.RadioSelect)
     anime = forms.ChoiceField(choices= ANIMELIST, label='好きなアニメ', widget=forms.widgets.RadioSelect)
-    movie = forms.ChoiceField(choices= MOVIELIST, label='好きな英語', widget=forms.widgets.RadioSelect)
+    movie = forms.ChoiceField(choices= MOVIELIST, label='好きな映画', widget=forms.widgets.RadioSelect)
     sport = forms.ChoiceField(choices= SPORTLIST, label='好きなスポーツ', widget=forms.widgets.RadioSelect)
