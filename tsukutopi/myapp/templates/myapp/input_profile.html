@@ -1,13 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/input_profile.css' %}">
   <title>プロフィール登録</title>
 </head>
 <body>
 <h1>プロフィール登録</h1>
-<form method="post">
+<form method="post" class="line-height-2">
     {% csrf_token %}
       {% for i in form %}
         {% if i.label == '学籍番号' or i.label == 'ニックネーム' or i.label == 'サークル' %}
@@ -23,8 +25,8 @@
           </div>
         {% endif %}
       {% endfor %}
-    <button type="submit">登録</button>
+    <button type="submit" class="bigbutten">登録</button>
 </form>
-<a href="..">戻る</a>
+<a href="..">ホームに戻る</a>
 </body>
 </html>

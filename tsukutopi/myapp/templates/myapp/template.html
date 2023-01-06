@@ -1,22 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>test</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/template.css' %}">
     </head>
     <body>
-        <h1>つくとぴです</h1>
-        {% for i in profile %}
+        <header>
+            <h1>つくとぴです</h1>
+            <h3>二人の共通点を探そう！</h3>
+        </header>
+        <!-- {% for i in profile %}
         <h2>{{ i.key_number }}: {{ i.nickname }}</h2>
-        {% endfor %}
-        <form action="./result" method = "get">
-            <input type = "number" minlength="9" maxlength="9" name="user1" />
-            <input type = "number" minlength="9" maxlength="9" name="user2" />
-            <button type = "submit">探す</button>
-        </form>
+        {% endfor %} -->
+        <div class="search-wrapper">
+            <form action="./result" method = "get">
+                <input type = "number" minlength="9" maxlength="9" name="user1" />
+                <input type = "number" minlength="9" maxlength="9" name="user2" />
+                <button type = "submit"><p class="button-sentence1">共通点を</p><p class="button-sentence2">探す</p></button>
+            </form>
+        </div>
         
         <!-- <a href="./result">探す</a> -->
-        <a href="./input">登録する</a>
+        <div class="subsc-wrapper">
+            <h2>はじめてご利用する方</h2>
+            <a href="./input"><p class="button-sentence2">登録する</p></a>
+        </div>
 
     </body>
 </html>

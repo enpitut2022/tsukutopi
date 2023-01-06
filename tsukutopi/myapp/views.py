@@ -32,7 +32,8 @@ def result(request):
     context = {
         # 'profile':profile,
         'share_point':share_point,
-        'profile_all':profile_all
+        'profile_all':profile_all,
+        'profile':profile
     }
     
 

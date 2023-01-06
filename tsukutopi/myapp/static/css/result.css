@@ -1,0 +1,10 @@
+/* body {
+} */
+
+.profile_wrapper{
+    display: flex;
+}
+.main_wrapper{
+    margin: auto;
+    color: rgb(204, 177, 0);
+}
