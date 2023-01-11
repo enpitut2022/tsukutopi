@@ -1,3 +1,14 @@
+body {
+  text-align: center;
+  background-color: #FAD3E7;
+  color: #0081B4;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+h1 {
+  font-family: "Nico Moji";
+}
+
 .line-height-2{
     line-height:2;
   }

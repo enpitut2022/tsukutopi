@@ -1,7 +1,17 @@
 body {
     text-align: center;
-    background-color: pink;
+    background-color:  #FAD3E7;
+    font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 h1, h3{
-    color:rgb(63, 63, 179)
+    color:#0081B4;
+    font-family: "Nico Moji";
+}
+
+.search-wrapper, .subsc-wrapper{
+    color:#0081B4;
+}
+
+.button-sentence1 ,.button-sentence2 {
+    font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }

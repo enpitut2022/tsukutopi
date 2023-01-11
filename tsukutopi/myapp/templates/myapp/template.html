@@ -5,6 +5,8 @@
         <title>test</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'css/template.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+
     </head>
     <body>
         <header>
@@ -16,8 +18,8 @@
         {% endfor %} -->
         <div class="search-wrapper">
             <form action="./result" method = "get">
-                <input type = "number" minlength="9" maxlength="9" name="user1" />
-                <input type = "number" minlength="9" maxlength="9" name="user2" />
+                <input type = "number" minlength="9" maxlength="9" name="user1" placeholder="あなたの学籍番号"/>
+                <input type = "number" minlength="9" maxlength="9" name="user2" placeholder="相手の学籍番号"/>
                 <button type = "submit"><p class="button-sentence1">共通点を</p><p class="button-sentence2">探す</p></button>
             </form>
         </div>
@@ -25,6 +27,7 @@
         <!-- <a href="./result">探す</a> -->
         <div class="subsc-wrapper">
             <h2>はじめてご利用する方</h2>
+            <h3>↓</h3>
             <a href="./input"><p class="button-sentence2">登録する</p></a>
         </div>
 

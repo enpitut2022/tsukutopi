@@ -1,8 +1,17 @@
-/* body {
-} */
+body {
+    text-align: center;
+    background-color: #FAD3E7;
+    color:#0081B4;
+    font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
 
+h1 {
+    font-family: "Nico Moji";
+}
 .profile_wrapper{
+    margin: auto;
     display: flex;
+    justify-content: center;
 }
 .main_wrapper{
     margin: auto;
