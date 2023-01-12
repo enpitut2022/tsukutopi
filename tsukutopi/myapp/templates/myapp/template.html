@@ -6,11 +6,11 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'css/template.css' %}">
         <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
-
+        <script src="{% static 'js/template.js' %}"></script>
     </head>
     <body>
         <header>
-            <h1>つくとぴです</h1>
+            <h1>つくとぴ</h1>
             <h3>二人の共通点を探そう！</h3>
         </header>
         <!-- {% for i in profile %}
@@ -18,9 +18,11 @@
         {% endfor %} -->
         <div class="search-wrapper">
             <form action="./result" method = "get">
+                <div class="school-num">
                 <input type = "number" minlength="9" maxlength="9" name="user1" placeholder="あなたの学籍番号"/>
                 <input type = "number" minlength="9" maxlength="9" name="user2" placeholder="相手の学籍番号"/>
-                <button type = "submit"><p class="button-sentence1">共通点を</p><p class="button-sentence2">探す</p></button>
+                </div>
+                <button type = "submit" class="btn--yellow btn--circle"><h1 class="button-sentence1">共通点を</h1><p class="button-sentence2">さがす！</p></button>
             </form>
         </div>
         
@@ -28,7 +30,7 @@
         <div class="subsc-wrapper">
             <h2>はじめてご利用する方</h2>
             <h3>↓</h3>
-            <a href="./input"><p class="button-sentence2">登録する</p></a>
+            <a href="./input" class="button-design">とうろく！</a>
         </div>
 
     </body>

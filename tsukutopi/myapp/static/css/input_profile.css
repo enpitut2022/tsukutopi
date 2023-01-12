@@ -2,7 +2,7 @@ body {
   text-align: center;
   background-color: #FAD3E7;
   color: #0081B4;
-  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  font-family: fot-tsukuardgothic-std, sans-serif;
 }
 
 h1 {
@@ -22,4 +22,23 @@ h1 {
 label {
     font-size: 120%;
     font-weight: bold;
+}
+
+.radio-inline__input {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+
+.radio-inline__input:checked {
+  background: #B54A4A;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
+.radio-inline__input:focus {
+  outline-color: #4D90FE;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }

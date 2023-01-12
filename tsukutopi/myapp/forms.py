@@ -23,7 +23,7 @@ class Profileforms(forms.ModelForm):
 class ProfileRadioForm(forms.Form):
     key_number = forms.IntegerField(label='学籍番号')
     nickname = forms.CharField(label='ニックネーム')
-    major_sub = forms.ChoiceField(choices=MAJORS, label='専攻', widget=forms.widgets.RadioSelect)
+    major_sub = forms.ChoiceField(choices=MAJORS, label='専攻', widget=forms.widgets.RadioSelect(attrs={'class': 'radio-inline_input'}))
     circle = forms.CharField(label='サークル')
     hometown = forms.ChoiceField(choices=PREFECTURES, label='出身', widget=forms.widgets.RadioSelect)
     music = forms.ChoiceField(choices=MUSICLIST, label='好きな音楽', widget=forms.widgets.RadioSelect)

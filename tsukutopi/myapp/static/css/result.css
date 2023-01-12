@@ -2,7 +2,8 @@ body {
     text-align: center;
     background-color: #FAD3E7;
     color:#0081B4;
-    font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    line-height:20px;
 }
 
 h1 {
@@ -17,3 +18,42 @@ h1 {
     margin: auto;
     color: rgb(204, 177, 0);
 }
+
+.bottom-wrapper{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+
+a.button-design{
+    border-radius: 0%;
+    line-height: 0px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color:#FAD3E7;
+    border:5px double white;
+    transition:.3s ease-out;
+    /* -webkit-box-shadow: 0 5px 0 #EFA3C8; */
+    /* box-shadow: 0 5px 0 #EFA3C8; */
+    margin:20px;
+}
+
+a.button-design:hover {
+    border-radius: 30%;
+    border:5px double white;
+    background-color:#F4D9E7;
+    /* -webkit-transform: translate(0, 3px); */
+    transform: translateY(3px);
+    /* -webkit-box-shadow: 0 2px 0 #EFA3C8; */
+    /* box-shadow: 0 2px 0 #EFA3C8; */
+  }
+
+  /* .profile {
+    border: 1px solid #ccc;
+  } */
+
