@@ -8,11 +8,28 @@ body {
 
 h1 {
     font-family: "Nico Moji";
+    font-size:500%;
+}
+h2{
+    font-size:500%;
+    margin-top: 100px;
 }
 .profile_wrapper{
     margin: auto;
     display: flex;
     justify-content: center;
+}
+.left-wrapper{
+    width: 20%;
+}
+.right-wrapper{
+    width: 20%;
+}
+.profile{
+    width:30%;
+}
+summary{
+    font-size:150%;
 }
 .main_wrapper{
     margin: auto;
@@ -44,7 +61,7 @@ a.button-design{
 }
 
 a.button-design:hover {
-    border-radius: 30%;
+    border-radius: 50%;
     border:5px double white;
     background-color:#F4D9E7;
     /* -webkit-transform: translate(0, 3px); */
@@ -52,8 +69,53 @@ a.button-design:hover {
     /* -webkit-box-shadow: 0 2px 0 #EFA3C8; */
     /* box-shadow: 0 2px 0 #EFA3C8; */
   }
+/* 
+  .profile {
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-  /* .profile {
+  .profile_wrapper section{
     border: 1px solid #ccc;
-  } */
+  }
 
+  .title {
+    /* position: relative;+マークの位置基準とするためrelative指定 */
+    /* cursor: pointer;
+    transition: all .5s ease;
+}
+
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;   
+}
+
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);   
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+}
+
+.title.close::before{
+    transform: rotate(45deg);
+  }
+  
+  .title.close::after{
+    transform: rotate(-45deg);
+  }
+  
+  /*アコーディオンで現れるエリア*/
+  /* .box {
+      /* display: none;/*はじめは非表示*/
+      /* background: #f3f3f3;
+  }  */ 
