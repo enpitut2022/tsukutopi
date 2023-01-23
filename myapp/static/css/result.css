@@ -1,0 +1,121 @@
+body {
+    text-align: center;
+    background-color: #FAD3E7;
+    color:#0081B4;
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    line-height:20px;
+}
+
+h1 {
+    font-family: "Nico Moji";
+    font-size:500%;
+}
+h2{
+    font-size:500%;
+    margin-top: 100px;
+}
+.profile_wrapper{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.left-wrapper{
+    width: 20%;
+}
+.right-wrapper{
+    width: 20%;
+}
+.profile{
+    width:30%;
+}
+summary{
+    font-size:150%;
+}
+.main_wrapper{
+    margin: auto;
+    color: rgb(204, 177, 0);
+}
+
+.bottom-wrapper{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+
+a.button-design{
+    border-radius: 0%;
+    line-height: 0px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color:#FAD3E7;
+    border:5px double white;
+    transition:.3s ease-out;
+    /* -webkit-box-shadow: 0 5px 0 #EFA3C8; */
+    /* box-shadow: 0 5px 0 #EFA3C8; */
+    margin:20px;
+}
+
+a.button-design:hover {
+    border-radius: 50%;
+    border:5px double white;
+    background-color:#F4D9E7;
+    /* -webkit-transform: translate(0, 3px); */
+    transform: translateY(3px);
+    /* -webkit-box-shadow: 0 2px 0 #EFA3C8; */
+    /* box-shadow: 0 2px 0 #EFA3C8; */
+  }
+/* 
+  .profile {
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .profile_wrapper section{
+    border: 1px solid #ccc;
+  }
+
+  .title {
+    /* position: relative;+マークの位置基準とするためrelative指定 */
+    /* cursor: pointer;
+    transition: all .5s ease;
+}
+
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;   
+}
+
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);   
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+}
+
+.title.close::before{
+    transform: rotate(45deg);
+  }
+  
+  .title.close::after{
+    transform: rotate(-45deg);
+  }
+  
+  /*アコーディオンで現れるエリア*/
+  /* .box {
+      /* display: none;/*はじめは非表示*/
+      /* background: #f3f3f3;
+  }  */ 

@@ -1,8 +1,13 @@
+<<<<<<< HEAD:myapp/templates/myapp/template.html
+=======
+{% load static %}
+>>>>>>> origin/tk_layout2:tsukutopi/myapp/templates/myapp/template.html
 <!DOCTYPE html>
 <html>
     <head>
         <title>test</title>
         <meta charset="utf-8">
+<<<<<<< HEAD:myapp/templates/myapp/template.html
     </head>
     <body>
         <h1>つくとぴです</h1>
@@ -10,6 +15,36 @@
         <h2>yajima</h2>
         <h2>nebada</h2>
         <a href="./result">探す</a>
+=======
+        <link rel="stylesheet" href="{% static 'css/template.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+        <script src="{% static 'js/template.js' %}"></script>
+    </head>
+    <body>
+        <header>
+            <h1>つくとぴ</h1>
+            <h3>二人の共通点を探そう！</h3>
+        </header>
+        <!-- {% for i in profile %}
+        <h2>{{ i.key_number }}: {{ i.nickname }}</h2>
+        {% endfor %} -->
+        <div class="search-wrapper">
+            <form action="./result" method = "get">
+                <div class="school-num">
+                <input type = "number" minlength="9" maxlength="9" name="user1" placeholder="あなたの学籍番号"/>
+                <input type = "number" minlength="9" maxlength="9" name="user2" placeholder="相手の学籍番号"/>
+                </div>
+                <button type = "submit" class="btn--yellow btn--circle"><h1 class="button-sentence1">共通点を</h1><p class="button-sentence2">さがす！</p></button>
+            </form>
+        </div>
+        
+        <!-- <a href="./result">探す</a> -->
+        <div class="subsc-wrapper">
+            <h2>はじめてご利用する方</h2>
+            <h3>↓</h3>
+            <a href="./input" class="button-design">とうろく！</a>
+        </div>
+>>>>>>> origin/tk_layout2:tsukutopi/myapp/templates/myapp/template.html
 
     </body>
 </html>

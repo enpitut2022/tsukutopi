@@ -15,21 +15,22 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+
+
+def get_env_variable(key):
+    try:
+        return os.environ[key]
+    except KeyError:
+        return None
 
 # データベースのパスとかを代入している
 SECRET_KEY = 'hogehoge'
-# SECRET_KEY = os.environ['SECRET_KEY']
-DBNAME=os.environ['DBNAME']
-DBHOST=os.environ['DBHOST']
-DBUSER=os.environ['DBUSER']
-DBPASS = os.environ['DBPASS']
+DATABASE_PASS = get_env_variable("DATABASE_PASS")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # env = environ.Env()
 # env.read_env(os.path.join(BASE_DIR, '.env'))
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -90,10 +91,10 @@ WSGI_APPLICATION = 'tsukutopi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DBNAME,
-        'USER': DBUSER,
-        'PASSWORD': DBPASS,
-        'HOST': DBHOST,
+        'NAME': 'myapp',
+        'USER': 'postgres',
+        'PASSWORD': 'Teacher11eaglu',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
         #'default': env.db(),
     }

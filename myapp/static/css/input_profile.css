@@ -1,0 +1,108 @@
+body {
+  text-align: center;
+  background-color: #FAD3E7;
+  color: #0081B4;
+  font-family: fot-tsukuardgothic-std, sans-serif;
+}
+
+h1 {
+  font-family: "Nico Moji";
+}
+
+.line-height-2{
+    line-height:2;
+  }
+
+.bigbutten {
+    width: 15%;
+    height: 120%;
+    font-size: 200%;
+    margin-bottom: 20px;
+  }
+
+label {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+  font-size: medium;
+}
+
+a.button-design{
+  border-radius: 0%;
+  line-height: 0px;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  background-color:#FAD3E7;
+  border:5px double white;
+  transition:.3s ease-out;
+  /* -webkit-box-shadow: 0 5px 0 #EFA3C8; */
+  /* box-shadow: 0 5px 0 #EFA3C8; */
+  margin:40px;
+}
+
+a.button-design:hover {
+  border-radius: 30%;
+  border:5px double white;
+  background-color:#F4D9E7;
+  /* -webkit-transform: translate(0, 3px); */
+  transform: translateY(3px);
+  /* -webkit-box-shadow: 0 2px 0 #EFA3C8; */
+  /* box-shadow: 0 2px 0 #EFA3C8; */
+}
+
+
+button.btn--circle {
+  font-size:x-large;
+  font-family: "Nico Moji";
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 0px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  color:#0081B4;
+  background-color:#FAD3E7;
+  border:4px double #0081B4;
+  /* -webkit-box-shadow: 0 5px 0 #EFA3C8; */
+  box-shadow: 0 5px 0 #EFA3C8;
+  margin:20px;
+}
+
+button.btn--circle:hover {
+  border:4px double #0081B4;
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  /* -webkit-box-shadow: 0 2px 0 #EFA3C8; */
+  box-shadow: 0 2px 0 #EFA3C8;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+-webkit-appearance: none; 
+margin: 0; 
+} 
+
+/* .radio-inline_input {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  font-size:500%;
+}
+
+
+.radio-inline_input:checked {
+  background: #B54A4A;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,.7);
+} */
+
+/* .radio-inline_input:focus {
+  outline-color: #4D90FE;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+} */

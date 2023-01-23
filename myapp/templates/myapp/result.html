@@ -1,8 +1,13 @@
+<<<<<<< HEAD:myapp/templates/myapp/result.html
+=======
+{% load static %}
+>>>>>>> origin/tk_layout2:tsukutopi/myapp/templates/myapp/result.html
 <!DOCTYPE html>
 <html>
     <head>
         <title>test</title>
         <meta charset="utf-8">
+<<<<<<< HEAD:myapp/templates/myapp/result.html
     </head>
     <body>
         <h1>つくとぴです!</h1>
@@ -16,5 +21,45 @@
         <p>{{ i.hometown }}</p> -->
 
         {% endfor %}
+=======
+        <link rel="stylesheet" href="{% static 'css/result.css' %}">
+        <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+        <script src="{% static 'js/result.js' %}"></script>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <h1>きょうつうてんは、、、</h1>
+            
+            {% for i in share_point %}
+            <h2> {{ forloop.counter }}位 :{{ i }}</h2>
+            {% endfor %}
+        </div>
+        
+    <div class="profile_wrapper">
+        <div class="left-wrapper">
+        </div>
+        {% for i in profile %}
+            <div class="profile">
+                <details>
+                    <summary class="title">{{ i.nickname }}</summary>
+                        <p>学籍番号{{ i.key_number }}</p>
+                        <p>所属：{{ i.major_sub }}</p>
+                        <p>サークル:{{ i.circle }}</p>
+                        <p>地元:{{ i.hometown }}</p>
+                        <p>好きな音楽：{{ i.music }}</p>
+                        <p>好きなラーメン屋：{{ i.ramen }}</p>
+                        <p>好きなゲーム：{{ i.game }}</p>
+                        <p>好きなアニメ：{{ i.anime }}</p>
+                        <p>好きな映画：{{ i.movie }}</p>
+                        <p>好きなスポーツ：{{ i.sport }}</p>
+                </details>        
+            </div>
+        <div class="right-wrapper">
+        </div>
+        {% endfor %}
+    </div>
+    <div class="bottom-wrapper">
+        <a href="../tsukutopi" class="button-design">ホームに戻る</a>
+>>>>>>> origin/tk_layout2:tsukutopi/myapp/templates/myapp/result.html
     </body>
 </html>
