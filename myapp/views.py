@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Profile
 from django.db.models import Q
+from myapp.forms import ProfileRadioForm
 # Create your views here.
 
 def index(request):
@@ -12,16 +13,52 @@ def index(request):
     return render(request, 'myapp/template.html', context)
 
 def result(request):
-    profile = Profile.objects.filter(Q(key_number=202088888)|Q(key_number=202099999))
-    profile_match = Profile.objects.filter(Q(key_number=202088888)|Q(key_number=202099999))
-    major_list = ["総合学類", "情報メディア創生学類", "人文学類", "比較文化学類", "日本語・日本文化学類", "社会学類", "国際総合学類", "教育学類", "心理学類", "障害科学類", "生物学類", "生物資源学類", "地球学類", "数学類", "物理学類", "化学類", "応用理工学類", "工学システム学類", "社会工学類", "情報科学類", "知識情報図書館学類", "医学類", "看護学類", "医療科学類", "体育専門学群", "芸術専門学群"]
-    for i in profile:
-        i.major_sub = major_list[i.major_sub]
+
+    if request.GET:
+        user1 = request.GET["user1"]
+        user2 = request.GET["user2"]
+    
+    profile = Profile.objects.filter(Q(key_number=int(user1))|Q(key_number=user2))
+    # profile_match = Profile.objects.filter(Q(key_number=202088888)|Q(key_number=202099999))
+    profile_all = Profile.objects.all()
+    share_point=[]
+    # print(profile[0].nickname)
+    object_items = vars(profile[0])
+    # print(object_items["key_number"])
+    for i in object_items.keys():
+        if vars(profile[0])[i] == vars(profile[1])[i]:      
+            share_point.append(vars(profile[0])[i])
+        
     context = {
-        'profile':profile,
-        'major_list': major_list
+        # 'profile':profile,
+        'share_point':share_point,
+        'profile_all':profile_all,
+        'profile':profile
     }
     
 
     return render(request, 'myapp/result.html', context)
 
+def kakikomi(request):
+    if request.method =='POST':
+        profile = Profile(
+        key_number = request.POST['key_number'],
+        nickname = request.POST['nickname'],
+        major_sub = request.POST['major_sub'],
+        circle = request.POST['circle'],
+        hometown = request.POST['hometown'],
+        music = request.POST['music'],
+        ramen = request.POST['ramen'],
+        game = request.POST['game'],
+        anime = request.POST['anime'],
+        movie = request.POST['movie'],
+        sport = request.POST['sport']
+        )
+        profile.save()
+        return redirect('index')
+    else:
+        profileform = ProfileRadioForm()
+        context = {
+            'form': profileform
+        }
+    return render(request, 'myapp/input_profile.html', context)
